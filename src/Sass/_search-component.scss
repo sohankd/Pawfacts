@@ -11,9 +11,8 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-    padding-right: $padding-lv1 + 2px;
+    border: 0.15rem solid $color-primary;
+    border-radius: $border-radius;
 
     @media (min-width: 768px){
         width: 350px;
@@ -25,11 +24,12 @@
     position: absolute;
     font-size: 1.2rem;
     padding: $padding-lv2;
-    background-color: #ccc;
+    background-color: $color-primary;
+    color: $color-secondary;
     top: -2px;
     left: -2px;
     transform: rotateY(180deg);
-    border-radius: 6px;
+    border-radius: $border-radius;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
@@ -56,7 +56,11 @@
     padding: $padding-lv1 $padding-lv3;
     outline: none;
     text-align: center;
+    background-color: transparent;
 
+    &:focus{
+        background-color: transparent;
+    }
     &::placeholder{
         font-size: 1rem;
     }

@@ -27,7 +27,7 @@
     background-size: 50% 150px, 100% 150px, 85% 15px, 300px 300px;
     background-position: -50% 0, 0 0, 50% 168px, 0 0;
     background-repeat: no-repeat;
-    border-radius: 6px;
+    border-radius: $border-radius;
     box-shadow: 0 0 3px 0px #bbb;
     animation: shine 1.5s infinite alternate;
 }

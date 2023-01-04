@@ -6,15 +6,13 @@ html, body, *{
     font-family: 'Exo 2', sans-serif;
 }
 
-a{
-    text-decoration: none;
+html, body{
+    background-color: rgb(253, 253, 253);
+    scroll-behavior: smooth;
 }
-a:visited
-a:active,
-a:focus,
-a:focus:hover,
-a:focus:active{
-    color: initial;
+
+a, p{
+    font-weight: $font-weight-semi-bold;
 }
 
 button{

@@ -2,21 +2,21 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    margin-top: 20px;
+    margin-top: $margin-lv4;
 }
 .breed-card{
     position: relative;
     min-height: 1px;
-    padding: 0px 10px;
+    padding: 0px $padding-lv2;
     width: 50%;
-    margin-bottom: 20px;
+    margin-bottom: $margin-lv4;
 }
 .breed-card-link{
     display: flex;
     flex-direction: column;
-    border-radius: 0.3rem;
+    border-radius: $border-radius;
     overflow: hidden;
-    box-shadow: 0 0 4px 0px #ccc;
+    box-shadow: 0 0 4px 0px $box-shadow-color-lightgrey;
 }
 .breed-image-wrapper{
     line-height: 1;
@@ -27,7 +27,7 @@
     height: 250px;
 }
 .breed-card-description-wrapper{
-    padding: 10px 15px 10px;
+    padding: $padding-lv2 $padding-lv3 $padding-lv2;
 }
 .breed-card-breed-name{
     overflow: hidden;
@@ -40,16 +40,18 @@
     text-align: center;
 }
 .breeds-load-more-button{
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    background-color: #0a2d91;
-    color: #fff;
-    margin: 15px 0;
-    border: none;
-    border-radius: 6px;
+    padding: $padding-lv2 $padding-lv2 * 3;
+    font-size: $font-size-l;
+    font-weight: $font-weight-semi-bold;
+    background-color: $color-secondary;
+    color: $color-primary-darken;
+    margin: 0 0 $margin-lv3;
+    border: 0.15rem solid $color-primary;
+    border-radius: $border-radius;
 }
 .breeds-load-more-button:hover{
-    background-color: rgba(10, 45, 145, 0.85);
+    background-color: $color-primary;
+    color: $color-secondary;
 }
 
 @media (min-width: 520px) and (max-width: 768px){

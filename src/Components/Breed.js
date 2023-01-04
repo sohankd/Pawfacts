@@ -12,7 +12,7 @@ function Breed(props){
     return(
         <div className="breed-card" ref={$breedCard}>
             <Link className="breed-card-link" to={breedUrl}>
-                <img className='breed-image' data-src={'/img/Dummy_image.jpg'} alt={breed.name} loading="lazy"/>
+                <img className='breed-image' data-src={breed.image?.url} alt={breed.name} loading="lazy"/>
                 <div className="breed-card-description-wrapper">
                     <p className="breed-card-breed-name" title={breed.name}>{breed.name}</p>
                 </div>

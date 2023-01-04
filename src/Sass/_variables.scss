@@ -24,3 +24,14 @@ $font-weight-regular: 400;
 $font-weight-semi-bold: 500;
 $font-weight-bold: 600;
 $font-weight-bolder: 700;
+
+// Color Variables
+$color-primary: #2d8d83;
+$color-primary-lighten: lighten($color: $color-primary, $amount: 5);
+$color-primary-darken: darken($color: $color-primary, $amount: 10);
+$color-secondary: #fcfcfc;
+$box-shadow-color-lightgrey: #ccc;
+
+$border-width: 0.15rem;
+$border-radius: 0.3rem;
+$border-radius-rounded: 50vh;

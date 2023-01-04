@@ -3,8 +3,8 @@
     flex-flow: row wrap;
     overflow: hidden;
     margin-bottom: $margin-lv4;
-    border-radius: 0.3rem;
-    box-shadow: 0px 1px 4px 0px #ccc;
+    border-radius: $border-radius;
+    box-shadow: 0px 1px 4px 0px $box-shadow-color-lightgrey;
 }
 .breed-thumbnail-wrapper{
     @extend .col-12;
@@ -36,6 +36,7 @@
 }
 .breed-name{
     font-weight: $font-weight-bold;
+    color: $color-primary;
     margin-bottom: $margin-lv3;
 }
 .breed-characterstic{
@@ -62,47 +63,54 @@ input.breed-characterstic-measurement-unit-toggler{
 .breed-characterstic-measurement-unit{
     display: inline-block;
     background-color: transparent;
+    color: $color-primary;
     font-size: $font-size-xs;
     padding: 3px $padding-lv2;
-    border-radius: 50vh;
+    border-radius: 4px;
     transition: background-color 200ms;
 }
 .breed-characterstic-measurement-unit-wrapper{
     position: absolute;
     right: 0;
     display: inline-block;
-    background-color: #ccc;
-    padding: 3px 3px;
-    line-height: 1;
-    border-radius: 50vh;
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    border-radius: $border-radius;
     cursor: pointer;
 
     &.imperial{
         .breed-characterstic-measurement-unit:first-of-type{
-            background-color: #fff;
+            background-color: $color-primary;
+            color: $color-secondary;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
         }
     }
     &.metric{
         .breed-characterstic-measurement-unit:last-of-type{
-            background-color: #fff;
+            background-color: $color-primary;
+            color: $color-secondary;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
         }
     }
 }
 .breed-description-wrapper{
     padding: $padding-lv2 $padding-lv3;
-    border-radius: 0.3rem;
+    border-radius: $border-radius;
     box-shadow: 0px 1px 4px 0px #ccc;
     margin-bottom: $margin-lv3;
 }
 .breed-description-header{
-    font-weight: $font-weight-bolder;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
 }
 
 .breed-skeleton-primary-row{
     width: 100%;
     height: 620px;
     margin-bottom: $margin-lv4;
-    border-radius: 0.3rem;
+    border-radius: $border-radius;
     box-shadow: 0px 1px 4px 0px #ccc;
     background-image:
         linear-gradient(
@@ -179,7 +187,7 @@ input.breed-characterstic-measurement-unit-toggler{
     width: 100%;
     height: 190px;
     margin-bottom: $margin-lv4;
-    border-radius: 0.3rem;
+    border-radius: $border-radius;
     box-shadow: 0px 1px 4px 0px #ccc;
     background-image:
         linear-gradient(#ddd 300px, transparent 0),
