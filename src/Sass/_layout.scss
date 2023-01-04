@@ -1,0 +1,5 @@
+@use './boostrap/bootstrap-grid.min.css';
+
+.layout-container{
+    @extend .container-fluid;
+}

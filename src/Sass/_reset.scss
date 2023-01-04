@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&display=swap');
+
+html, body, *{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited
+a:active,
+a:focus,
+a:focus:hover,
+a:focus:active{
+    color: initial;
+}
+
+button{
+    cursor: pointer;
+}
+button:disabled{
+    cursor: default;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    /* Remove default */
+    appearance: none;
+    -webkit-appearance: none;
+}

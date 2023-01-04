@@ -1,0 +1,244 @@
+.breed-primary-row{
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+    margin-bottom: $margin-lv4;
+    border-radius: 0.3rem;
+    box-shadow: 0px 1px 4px 0px #ccc;
+}
+.breed-thumbnail-wrapper{
+    @extend .col-12;
+    @extend .col-md-5;
+    @extend .col-lg-6;
+}
+.breed-thumbnail{
+    display: block;
+    width: 100%;
+    height: 250px;
+    border: none;
+
+    @media (min-width: 768px) and (max-width: 991px){
+        height: 300px;
+    }
+    @media (min-width: 992px){
+        height: 350px;
+    }
+}
+.breed-details-wrapper{
+    @extend .col-12;
+    @extend .col-md-7;
+    @extend .col-lg-6;
+    padding: $padding-lv2 $padding-lv4;
+
+    @media (min-width: 768px){
+        padding: $padding-lv2 $padding-lv2 * 3;
+    }
+}
+.breed-name{
+    font-weight: $font-weight-bold;
+    margin-bottom: $margin-lv3;
+}
+.breed-characterstic{
+    position: relative;
+
+    &.flex{
+        display: flex;
+        align-items: baseline;
+    }
+}
+.breed-characterstic-label{
+    margin-right: $margin-lv2;
+}
+.breed-characterstic-value{
+    font-size: $font-size-s;
+    font-weight: $font-weight-bold;
+}
+input.breed-characterstic-measurement-unit-toggler{
+    position: absolute;
+    visibility: hidden;
+    top: 25%;
+    left: 30%;
+}
+.breed-characterstic-measurement-unit{
+    display: inline-block;
+    background-color: transparent;
+    font-size: $font-size-xs;
+    padding: 3px $padding-lv2;
+    border-radius: 50vh;
+    transition: background-color 200ms;
+}
+.breed-characterstic-measurement-unit-wrapper{
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    background-color: #ccc;
+    padding: 3px 3px;
+    line-height: 1;
+    border-radius: 50vh;
+    cursor: pointer;
+
+    &.imperial{
+        .breed-characterstic-measurement-unit:first-of-type{
+            background-color: #fff;
+        }
+    }
+    &.metric{
+        .breed-characterstic-measurement-unit:last-of-type{
+            background-color: #fff;
+        }
+    }
+}
+.breed-description-wrapper{
+    padding: $padding-lv2 $padding-lv3;
+    border-radius: 0.3rem;
+    box-shadow: 0px 1px 4px 0px #ccc;
+    margin-bottom: $margin-lv3;
+}
+.breed-description-header{
+    font-weight: $font-weight-bolder;
+}
+
+.breed-skeleton-primary-row{
+    width: 100%;
+    height: 620px;
+    margin-bottom: $margin-lv4;
+    border-radius: 0.3rem;
+    box-shadow: 0px 1px 4px 0px #ccc;
+    background-image:
+        linear-gradient(
+            90deg, 
+            rgba(245, 245, 245, 0) 0, 
+            rgba(245, 245, 245, .8) 50%, 
+            rgba(245, 245, 245, 0) 100%
+        ),
+        linear-gradient(#ddd 800px, transparent 0),
+        linear-gradient(#ddd 800px, transparent 0),
+        linear-gradient(#ddd 800px, transparent 0),
+        linear-gradient(#ddd 800px, transparent 0),
+        linear-gradient(#ddd 800px, transparent 0),
+        linear-gradient(#ddd 800px, transparent 0);
+    background-position:
+        -50% 0px, 
+        0px 0px,
+        20px 380px,
+        20px 450px,
+        20px 490px,
+        20px 530px,
+        20px 570px;
+    background-size:
+        50% 100%,
+        100% 350px,
+        calc(100% - 40px) 35px,
+        calc(100% - 40px) 20px,
+        calc(100% - 40px) 20px,
+        calc(100% - 40px) 20px,
+        calc(100% - 40px) 20px;
+    background-repeat: no-repeat;
+    animation: shine2 1.5s infinite;
+
+    @media (min-width: 768px) and (max-width: 991px){
+        height: 350px;
+        background-position:
+            -50% 0px, 
+            0px 0px,
+            93% 30px,
+            93% 125px,
+            93% 165px,
+            93% 205px,
+            93% 245px;
+        background-size:
+            50% 100%,
+            41% 350px,
+            52% 35px,
+            52% 20px,
+            52% 20px,
+            52% 20px,
+            52% 20px;
+    }
+    @media (min-width: 992px){
+        height: 350px;
+        background-position: 
+            -50% 0px,
+            0px 0px,
+            96% 30px,
+            96% 125px,
+            96% 165px,
+            96% 205px,
+            96% 245px;
+        background-size:
+            50% 100%,
+            50% 350px,
+            46% 35px,
+            46% 20px,
+            46% 20px,
+            46% 20px,
+            46% 20px;
+    }
+}
+.breed-skeleton-secondary-row{
+    width: 100%;
+    height: 190px;
+    margin-bottom: $margin-lv4;
+    border-radius: 0.3rem;
+    box-shadow: 0px 1px 4px 0px #ccc;
+    background-image:
+        linear-gradient(#ddd 300px, transparent 0),
+        linear-gradient(#ddd 800px, transparent 0);
+    background-position: 
+        25px 20px,
+        25px 70px;
+    background-size:
+        25% 30px,
+        95.5% 100px;
+    background-repeat: no-repeat;
+    
+    @media (min-width: 768px) and (max-width: 991px){
+        background-size:
+            33.333% 30px,
+            calc(100% - 50px) 100px;
+    }
+    @media (max-width: 767px){
+        display: none;
+    }
+}
+
+@keyframes shine2{
+    to{
+        background-position: 
+            150% 0px,
+            0px 0px,
+            20px 380px,
+            20px 450px,
+            20px 490px,
+            20px 530px,
+            20px 570px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    @keyframes shine2{
+        to{
+            background-size:
+                150% 100%,
+                41% 350px,
+                52% 35px,
+                52% 20px,
+                52% 20px,
+                52% 20px,
+                52% 20px;
+        }
+    }
+}
+@media (min-width: 992px){
+    @keyframes shine2{
+        to{
+            background-position: 
+                150% 0px,
+                0px 0px,
+                96% 30px,
+                96% 125px,
+                96% 165px,
+                96% 205px,
+                96% 245px;
+        }
+    }
+}
