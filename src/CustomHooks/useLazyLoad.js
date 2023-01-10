@@ -35,6 +35,10 @@ function lazyload ($el){
             else if(!el.getAttribute('srcset') && el.getAttribute('data-srcset')){
                 el.srcset = el.getAttribute('data-srcset');
             }
+            else{
+                el.src = 'img/no_image.svg';
+                el.classList.toggle('no-image');
+            }
         }
     ,   removePropsAndEventListeners = (e) => {
             let $el = e.currentTarget;
@@ -46,6 +50,7 @@ function lazyload ($el){
         }
     ,   imageOnError = (e) => {
             e.currentTarget.src = 'img/no_image.svg';
+            e.currentTarget.classList.toggle('no-image');
             removePropsAndEventListeners(e);
         }
     ,   imageObserver = new IntersectionObserver(function(entries, imageObserver){

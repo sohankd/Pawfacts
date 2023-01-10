@@ -70,8 +70,13 @@
     }
 }
 
-img.lazyload-blur{
-    filter: blur(7px) grayscale(0.8);
+img{
+    &.lazyload-blur{
+        filter: blur(7px) grayscale(0.8);
+    }
+    &.no-image{
+        padding: 0 $padding-lv2;
+    }
 }
 
 .collapse{
