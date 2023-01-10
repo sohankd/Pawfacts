@@ -3,6 +3,7 @@ import Breed from "./Breed";
 import {getBreedList} from "./TheDogAPI";
 import SkeletonCards from './Skeleton.Cards';
 import SearchComponent from './SearchComponent';
+import useMetadata from "../CustomHooks/useMetaData";
 
 function Breeds(props){
     let [breedCollection, setBreedCollection] = useState({total: 0, breeds: []})
@@ -28,6 +29,14 @@ function Breeds(props){
     function handleLoadMoreAction(){
         setPagination(prevState => ({...prevState, currentPage: prevState.currentPage + 1}));
     }
+
+    useMetadata({
+        title: 'All Dog Breeds | Pawfacts | Know Your Dog'
+    ,   metaTagData: [
+            {name: 'keywords', content: 'all dog breeds, type of dogs, dog types, dog breeds'}
+        ,   {name: 'description', content: 'As per the TheDogAPI, 172 dog breed exists in the world.'}
+        ]
+    });
     
     return (
         <>

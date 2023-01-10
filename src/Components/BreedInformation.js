@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import useMetadata from "../CustomHooks/useMetaData";
 import { searchForBreed, getImage } from './TheDogAPI';
 
 function BreedInformation(props){
@@ -44,6 +45,14 @@ function BreedInformation(props){
         }
     });
 
+    useMetadata({
+        title: `${breedName} | Pawfacts | Know Your Dog`
+    ,   metaTagData: [
+            {name: 'keywords', content: breedName}
+        ,   {name: 'description', content: breedName}
+        ]
+    });
+
     function updateMeasurementUnit(){
         setStandardUnit(standardUnit === 'metric' ? 'imperial' : 'metric');
     }
@@ -53,7 +62,7 @@ function BreedInformation(props){
             {breed ?
             <div className="breed-primary-row">
                 <div className="breed-thumbnail-wrapper">
-                    <img src={breed && breed.images ? breed.images[breed.images.length - 1].url : ''} alt={breed ? breed.name : ''} className="breed-thumbnail" />
+                    <img src={breed && breed.images && breed.images.length ? breed.images[breed.images.length - 1].url : ''} alt={breed ? breed.name : ''} className="breed-thumbnail" />
                 </div>
                 <div className="breed-details-wrapper">
                     <h1 className="breed-name">{breed ? breed.name : breedName}</h1>
