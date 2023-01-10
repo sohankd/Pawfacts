@@ -3,11 +3,31 @@
     margin-bottom: $margin-lv4;
     box-shadow: 0 0 4px 1px $box-shadow-color-lightgrey;
 }
+.header-logo-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo{
+    height: 70px;
+    padding: $padding-lv1+2px 0;
+
+    @media (min-width: 768px) and (max-width: 991px){
+        height: 80px;
+    }
+    @media (min-width: 992px){
+        height: 90px;
+    }
+}
 .header-text{
-    font-size: $font-size-xxxl * 1.25;
+    font-size: $font-size-xxxl;
     padding: 0;
     color: $color-primary;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     font-weight: $font-weight-semi-bold;
     text-shadow: 0px 4px 2px #ccc;
+
+    @media (min-width: 992px){
+        font-size: $font-size-xxxl * 1.25;
+    }
 }
